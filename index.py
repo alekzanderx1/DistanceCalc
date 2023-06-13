@@ -33,7 +33,3 @@ def calculateDistance():
             "Only POST Method allowed",
             status=400,
         )
-
-if __name__=='__main__':
-  # Run the Flask app to run the server
-  app.run(debug=False)
