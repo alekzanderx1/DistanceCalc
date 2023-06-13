@@ -27,7 +27,7 @@
 					$('#result1').text(result1);
 				},
 				error : (data) => {
-					alert('Error in calculation!');
+					alert('Error in calculation! Please check input is correct.');
 				}
             });
         });
@@ -42,24 +42,24 @@
 		  	<div class="page-header">
 		    	<h1 class="display-2 text-center" >Distance Calculator Utilility</h1>      
 		  	</div>
-
 			</br>
-			<h2>Please select two locations to calculate distance between</h2>
+			<h2>Please enter two locations to calculate distance between</h2>
 			<form id="myform" method="POST">
-
 
       			<div class="mb-3">
 				<label for="pointA" class="form-label">Point A</label>
-		  		<input type="text" id="pointA" name="pointA" class="form-control"><br>
+		  		<input type="text" id="pointA" name="pointA" class="form-control" placeholder="longitude,latitude"><br>
 				</div>
 
       			<div class="mb-3">				
 				<label for="pointB" class="form-label">Point B</label>
-		  		<input type="text" id="pointB" name="pointB" class="form-control"><br>
+		  		<input type="text" id="pointB" name="pointB" class="form-control" placeholder="longitude,latitude"><br>
 		  		</div>
 
 			</form>
+
 			</br>
+	
 			<button id="loadResults" class="btn btn-primary btn-block mb-4">Calculate</button>
 			</br>
 			</br>
