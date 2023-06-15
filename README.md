@@ -2,7 +2,7 @@
 
 A web app that calculates the air distance between two points, given longitude and latitude OR using address which is converted to geolocation using googlemaps API.
 
-Although the apps functionality is very trivial, it mainly demonstrates how easy it is to utilize Vercel and Flask to host an application with APIs, templated HTML pages, and static content with minimal setup required. Moreover you get detailed usage and monitoring analytics in addition to so many more useful features.
+Although the apps functionality is very trivial, it mainly demonstrates how easy it is to utilize Vercel and Flask to host an application with APIs, templated HTML pages, and static content with minimal setup required. Moreover you get automatic builds on new commits, automatic deployments, detailed usage and monitoring analytics in addition to so many more useful features.
 
 > App Demo available here until account limits are reached: https://distance-calc.vercel.app/ 
 
@@ -35,3 +35,7 @@ Navigate to Project root and follow below steps:
 4. In Project settings, create new environment variable `GMAPS_API_KEY` with value as API key obtained above
 
 > The Flask app should should be deployed automatically and public link avilable for you to use
+
+---
+
+As we can see, with the code already in place, setup should not take more than 10 minutes, demostrating how easy it is to host your own web app online. Moreover, as you push new changes, the app will be automatically redeployed with the new changes.
