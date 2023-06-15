@@ -8,6 +8,8 @@ import os
 # By assigning parameters as static folder name,templates folder name
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
+# API key obtained fron environment variable
+# compatible with Vercel or Containers 
 GMAPS_API_KEY = os.environ.get('GMAPS_API_KEY')
 gmaps = googlemaps.Client(key=GMAPS_API_KEY)
 
@@ -34,7 +36,8 @@ def findCoordinates():
         
         # Geocoding an address using gmaps API
         geocode_result = gmaps.geocode(address)
-        print(f"geocode_result: {geocode_result}")
+        # Debug
+        # print(f"geocode_result: {geocode_result}")
         longitude = geocode_result[0]['geometry']['location']['lng']
         latitude = geocode_result[0]['geometry']['location']['lat']
       

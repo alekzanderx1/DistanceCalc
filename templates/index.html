@@ -46,7 +46,7 @@
                 dataType : 'json',
 				contentType: 'application/json',
 				success : (data) => {
-					$('#geoResult').text(data.coordinates );
+					$('#geoResult').text("  Coordinates: " + data.coordinates);
 				},
 				error : (data) => {
 					alert('Please enter valid address.');
@@ -61,11 +61,12 @@
 	    <div class="col">
 	    </div>
 	    <div class="col-8">
+		<!-- All Content goes here in the center of Grid -->
 		  	<div class="page-header">
-		    	<h1 class="display-2 text-center" >Distance Calculator Utilility</h1>      
+		    	<h1 class="display-2 text-center" >Distance Calculator Utility</h1>      
 		  	</div>
 			</br>
-			<h2>Please enter two locations to calculate distance between</h2>
+			<h2>Enter coordinates for both points</h2>
 			<form id="myform" method="POST">
 
       			<div class="mb-3">
@@ -82,7 +83,7 @@
 
 			</br>
 
-			<!-- Modal -->
+			<!-- Modal popup for Geoplocation calculator-->
 			<p>Know the address and not geolocation? </p>
 			<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#geolocate">
 				Find coordinates
@@ -104,10 +105,9 @@
 					  </form>
 					  <button id="loadCoordinates" class="btn btn-primary btn-block mb-4">Find</button>
 					</div>
-					<h2 id="geoResult"></h2>
+					<p id="geoResult"></p>
 					<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
 					</div>
 				</div>
 				</div>
